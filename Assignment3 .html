@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="modernizr.min.js"></script>
+<script language="javascript" src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+<script language="javascript" src="registration.js"></script>
+
+</head>
+	<body onload="onRefresh()">
+	<form name="myform" id="myform" method="post">
+		<table style="width:50%">
+		<tr>
+		<td>
+		<label> First Name : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="fName" placeholder="First name" required></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Last Name : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="lName" placeholder="Second name" required></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Email : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="email" placeholder="user@domain.com"required></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Password : </label></br>
+		</td>
+		<td>
+		<input type="password" id="password" name="password" onkeyup="passwordCheck(this);" pattern="^(?=(.*[^A-Za-z0-9]){2})(?=(.*[A-Z]){3})(?=(.*[a-z]){2}).+" title="Password must contain 3 upper case, 2 lower case and 2 special chars.">
+		</td>
+		<td>
+		<progress id="passStrength" value="10" max="100" ></progress>  
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Confirm Password : </label></br>
+		</td>
+		<td>
+		<input type = "password" id="confirmPassword" required></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> D.O.B : </label></br>
+		</td>
+		<td>
+		<input type = "date" id="dob">
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> D.O.B with time : </label></br>
+		</td>
+		<td>
+		<input type = "datetime" id="dobtime">
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Local D.O.B : </label></br>
+		</td>
+		<td>
+		<input type = "datetime-local" id="localdob">
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> SSN : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="ssn" required pattern="^[0-9]{3}-[0-9]{2}-[0-9]{4}$" title="###-##-####"></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Phone : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="phoneNumber" required `pattern="[1-9][0-9]{9}" title="Phone number should be of 10 digits and should not start with a zero"></input>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<label> Credit Card No. : </label></br>
+		</td>
+		<td>
+		<input type = "text" id="creditCard" pattern="[0-9]{12}|[0-9]{16}" title="12 digits / 16 digits"></input>
+		</td>
+		</tr>
+		<tr>
+		
+		<td>
+		<input type="submit" value="Register" onclick="passwordMatch()">
+		</td>
+		</tr>
+		</table>
+		</br></br>
+		
+	</form>
+		
+	</body>
+</html>
